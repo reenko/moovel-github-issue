@@ -1,0 +1,23 @@
+<div class="container"
+  style="background: #222 url('https://picsum.photos/id/135/2560/1920') center center no-repeat; background-size: cover;">
+  <div class="row">
+    {{#if users}}
+      <h3 class="doc">Total: {{meta.total_count}} user(s)</h3>
+    {{else}}
+      <h3 class="doc">No results, please, try again</h3>
+    {{/if}}
+  </div>
+  <div class="row" style="min-height: calc(100vh - 10.25rem);">
+    {{#each users}}
+      <div class="card" style="max-width: 200px;">
+        <div class="section">
+          <h3 class="doc">{{name}}</h3>
+          <img src="{{avatar_url}}" />
+          <p class="doc"><a href="{{url}}">@{{username}}</a></p>
+          <p class="doc">Followers: {{followers_count}}</p>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>
+
